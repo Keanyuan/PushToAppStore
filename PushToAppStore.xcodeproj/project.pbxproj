@@ -16,6 +16,7 @@
 		EC1678271D62BAEC00A3D3A0 /* PushToAppStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1678261D62BAEC00A3D3A0 /* PushToAppStoreTests.m */; };
 		EC1678321D62BAEC00A3D3A0 /* PushToAppStoreUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1678311D62BAEC00A3D3A0 /* PushToAppStoreUITests.m */; };
 		EC1678411D62BB0500A3D3A0 /* QPushToAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1678401D62BB0500A3D3A0 /* QPushToAppStore.m */; };
+		EC6F6D6C1D6D395C007B6AEF /* KaneVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6F6D6B1D6D395C007B6AEF /* KaneVersionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		EC1678331D62BAEC00A3D3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC16783F1D62BB0500A3D3A0 /* QPushToAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QPushToAppStore.h; sourceTree = "<group>"; };
 		EC1678401D62BB0500A3D3A0 /* QPushToAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QPushToAppStore.m; sourceTree = "<group>"; };
+		EC6F6D6A1D6D395C007B6AEF /* KaneVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaneVersionManager.h; sourceTree = "<group>"; };
+		EC6F6D6B1D6D395C007B6AEF /* KaneVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaneVersionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				EC1678131D62BAEC00A3D3A0 /* ViewController.m */,
 				EC16783F1D62BB0500A3D3A0 /* QPushToAppStore.h */,
 				EC1678401D62BB0500A3D3A0 /* QPushToAppStore.m */,
+				EC6F6D6A1D6D395C007B6AEF /* KaneVersionManager.h */,
+				EC6F6D6B1D6D395C007B6AEF /* KaneVersionManager.m */,
 				EC1678151D62BAEC00A3D3A0 /* Main.storyboard */,
 				EC1678181D62BAEC00A3D3A0 /* Assets.xcassets */,
 				EC16781A1D62BAEC00A3D3A0 /* LaunchScreen.storyboard */,
@@ -276,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1678141D62BAEC00A3D3A0 /* ViewController.m in Sources */,
+				EC6F6D6C1D6D395C007B6AEF /* KaneVersionManager.m in Sources */,
 				EC1678111D62BAEC00A3D3A0 /* AppDelegate.m in Sources */,
 				EC1678411D62BB0500A3D3A0 /* QPushToAppStore.m in Sources */,
 				EC16780E1D62BAEC00A3D3A0 /* main.m in Sources */,
@@ -422,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PushToAppStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.storyboard.PushToAppStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PushToAppStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.storyboard.PushToAppStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -504,6 +512,7 @@
 				EC1678381D62BAEC00A3D3A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC1678391D62BAEC00A3D3A0 /* Build configuration list for PBXNativeTarget "PushToAppStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +521,7 @@
 				EC16783B1D62BAEC00A3D3A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC16783C1D62BAEC00A3D3A0 /* Build configuration list for PBXNativeTarget "PushToAppStoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +530,7 @@
 				EC16783E1D62BAEC00A3D3A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

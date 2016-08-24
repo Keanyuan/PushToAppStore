@@ -11,7 +11,7 @@
 
 
 //判断时间 点击了对应的按钮所需的天数 下次弹出appstore对话框
-#define ShowRefusalDay 2
+#define ShowRefusalDay 0
 #define ShowComplaintsDay 8
 #define ShowPraiseDay 16
 #define APPSTORE_UEL @"itms-apps://itunes.apple.com/us/app/lao-you/id1142134162?l=zh&ls=1&mt=8"
@@ -32,7 +32,7 @@ NSString *const LastSelectState = @"LastSelectState";
 @end
 @implementation QPushToAppStore
 
-+ (QPushToAppStore*)sharePushToAppStpre {
++ (QPushToAppStore*)shareInstance {
     static QPushToAppStore *sharedObject = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

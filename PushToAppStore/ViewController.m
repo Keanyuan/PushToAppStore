@@ -8,7 +8,15 @@
 
 #import "ViewController.h"
 #import "QPushToAppStore.h"
-@interface ViewController ()
+#import "KaneVersionManager.h"
+
+static NSString *ID = @"Cell";
+
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, copy) NSString *text;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,14 +24,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[QPushToAppStore sharePushToAppStpre] showGotoAppStore];
-    });
+
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return  10;
 }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = @"cellTest";
+    if (indexPath.row==0) {
+        cell.textLabel.text = @"友情评价";
+    } else if (indexPath.row == 1) {
+        cell.textLabel.text = @"检测版本";
+    }
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"hhh%ld",indexPath.row);
+    if (indexPath.row==0) {
+        [[QPushToAppStore shareInstance]showGotoAppStore];
+    } else if (indexPath.row == 1) {
+        [[KaneVersionManager shareInstance]checkVersion:1];
+    }
+    
+}
+
+//修改cell separatorStyleSingleLine 长度
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 15)];
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 15)];
+    }
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
+}
+
 
 @end

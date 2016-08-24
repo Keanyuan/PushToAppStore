@@ -16,7 +16,7 @@ typedef enum : NSUInteger {
 } lastSelectStateEunm;
 
 @interface QPushToAppStore : NSObject
-+ (QPushToAppStore*)sharePushToAppStpre;
++ (QPushToAppStore*)shareInstance;
 
 - (void)showGotoAppStore;
 @end
