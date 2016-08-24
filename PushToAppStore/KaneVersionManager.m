@@ -50,7 +50,7 @@
         [self performSelectorInBackground:@selector(checkAppStoreVersion) withObject:nil];
         return;
     }
-    
+//    如果要更新UI必须回到主线程中,可以用performSelectorOnMainThread回到主线程（更新UI的话必须到主线程），用或者调用或者调用 委托函数，在主线程中实现委托函数
     @autoreleasepool  {
     //prevent concurrent checks
         static BOOL checking = NO;
