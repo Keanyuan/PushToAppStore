@@ -8,9 +8,11 @@
 
 #import "KaneVersionManager.h"
 
+// 应用已经发布到APP Store后才会在Itunes上有应用的链接
+// 所以版本检测必须是已经发布过才能做
+// 在真正实现功能时，需要替换成真正的链接
 #define kAppStoreLink  @"itms-apps://itunes.apple.com/us/app/lao-you/id1142134162?l=zh&ls=1&mt=8"
 #define kItunsLink @"http://itunes.apple.com/cn/lookup?id=1142134162"
-#define kRequestTimeOut 60.0
 
 @interface KaneVersionManager() {
     int         _type;

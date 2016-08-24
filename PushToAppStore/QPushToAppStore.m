@@ -11,9 +11,13 @@
 
 
 //判断时间 点击了对应的按钮所需的天数 下次弹出appstore对话框
+//时间可以自行修改
 #define ShowRefusalDay 0
 #define ShowComplaintsDay 8
 #define ShowPraiseDay 16
+// 应用已经发布到APP Store后才会在Itunes上有应用的链接
+// 所以版本检测必须是已经发布过才能做
+// 在真正实现功能时，需要替换成真正的链接
 #define APPSTORE_UEL @"itms-apps://itunes.apple.com/us/app/lao-you/id1142134162?l=zh&ls=1&mt=8"
 
 //上传打开时间
